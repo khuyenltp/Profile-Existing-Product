@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Designveloper - Existing Product Outsourcing Profile</title>
+  <meta name="description" content="Designveloper outsourcing profile for clients with an existing product who need technical audit, transition scoping, takeover, and continued development.">
+  <style>
+    :root {
+      --charcoal: #2f373e;
+      --charcoal-2: #3f474e;
+      --ink: #17202a;
+      --muted: #66717d;
+      --paper: #ffffff;
+      --soft: #f4f6f8;
+      --line: #dfe5eb;
+      --yellow: #f7bd13;
+      --yellow-2: #ffe7a3;
+      --teal: #0f766e;
+      --blue: #2563eb;
+      --orange: #c05621;
+      --green: #2f855a;
+      --shadow: 0 18px 55px rgba(23, 32, 42, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e9edf1;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1240px, calc(100% - 32px));
+      margin: 24px auto 48px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 560px;
+      color: #fff;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(47, 55, 62, 0.94), rgba(47, 55, 62, 0.72) 52%, rgba(47, 55, 62, 0.18));
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      right: clamp(18px, 5vw, 72px);
+      bottom: 36px;
+      width: clamp(86px, 12vw, 150px);
+      height: clamp(86px, 12vw, 150px);
+      background: var(--yellow);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      align-content: space-between;
+      gap: 40px;
+      padding: 48px clamp(28px, 5vw, 68px);
+      min-height: 560px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: min(320px, 70vw);
+      height: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      background: var(--yellow);
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-top: 14px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin-top: 18px;
+      color: #e9edf1;
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+      max-width: 860px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,0.26);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .hero-actions .btn {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      min-height: 86px;
+      text-align: left;
+    }
+
+    .hero-actions .btn strong {
+      display: block;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .hero-actions .btn span {
+      display: block;
+      color: #dce3ea;
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    .hero-actions .btn.primary span {
+      color: rgba(47,55,62,0.78);
+    }
+
+    .btn.primary {
+      border-color: var(--yellow);
+      background: var(--yellow);
+      color: var(--charcoal);
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(105px, 1fr));
+      gap: 10px;
+      max-width: 850px;
+    }
+
+    .metric {
+      border-left: 3px solid var(--yellow);
+      background: rgba(255,255,255,0.08);
+      padding: 12px 14px;
+      min-height: 92px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 5px;
+      color: #dce3ea;
+      font-size: 12px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav a {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 14px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      border-right: 1px solid var(--line);
+    }
+
+    .nav a:last-child {
+      border-right: 0;
+    }
+
+    section {
+      padding: 54px clamp(22px, 5vw, 66px);
+    }
+
+    .section-dark {
+      background: var(--charcoal);
+      color: #fff;
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-kicker {
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 8px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-lead {
+      max-width: 860px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .section-dark .section-lead {
+      color: #dce3ea;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 22px;
+    }
+
+    .section-dark .card {
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      line-height: 1.22;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    .section-dark .card p {
+      color: #dce3ea;
+    }
+
+    .estimate-cta {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 28px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--yellow);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .estimate-cta strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .estimate-cta span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .estimate-cta .btn {
+      min-width: 210px;
+      color: var(--charcoal);
+    }
+
+    .snapshot-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+    }
+
+    .snapshot-card p {
+      flex: 1;
+      margin-top: 16px;
+    }
+
+    .snapshot-card .tag-list {
+      margin-top: 22px;
+    }
+
+    .accent-line {
+      height: 4px;
+      width: 52px;
+      margin-bottom: 14px;
+      background: var(--yellow);
+    }
+
+    .accent-teal {
+      background: var(--yellow);
+    }
+
+    .accent-blue {
+      background: var(--yellow);
+    }
+
+    .accent-orange {
+      background: var(--yellow);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: #eef2f6;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    a.tag {
+      text-decoration: none;
+    }
+
+    a.tag:hover {
+      background: var(--yellow);
+      color: var(--charcoal);
+    }
+
+    .section-dark .tag {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
+    .next-step-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .next-step-card p {
+      flex: 1;
+    }
+
+    .next-step-card .tag-list {
+      margin-top: 22px;
+    }
+
+    .next-step-card a.tag {
+      width: 210px;
+      min-height: 44px;
+      padding: 10px 14px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .profile-overview {
+      background: #fff;
+    }
+
+    .profile-table-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .profile-table-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-top: 6px solid var(--yellow);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .profile-table-card.teal {
+      border-top-color: var(--yellow);
+    }
+
+    .profile-table-card.blue {
+      border-top-color: var(--yellow);
+    }
+
+    .profile-table-card.orange {
+      border-top-color: var(--yellow);
+    }
+
+    .profile-table-heading {
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-table-heading span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .profile-table-heading h3 {
+      margin-top: 6px;
+      font-size: 22px;
+      line-height: 1.16;
+    }
+
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      flex: 1;
+    }
+
+    .profile-table th,
+    .profile-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .profile-table th {
+      width: 34%;
+      background: #f8fafc;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .profile-table td {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .profile-table tr:last-child th,
+    .profile-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .profile-table-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .table-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 9px 13px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .table-link.secondary {
+      background: #eef2f6;
+      color: var(--ink);
+    }
+
+    .profile {
+      border-top: 8px solid var(--yellow);
+    }
+
+    .profile.teal {
+      border-top-color: var(--yellow);
+    }
+
+    .profile.blue {
+      border-top-color: var(--yellow);
+    }
+
+    .profile.orange {
+      border-top-color: var(--yellow);
+    }
+
+    .profile-header {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: end;
+    }
+
+    .one-liner {
+      margin-top: 18px;
+      border-left: 5px solid var(--yellow);
+      background: #fff8e3;
+      padding: 18px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 22px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .profile.teal .one-liner {
+      border-left-color: var(--yellow);
+      background: #fff8e3;
+    }
+
+    .profile.blue .one-liner {
+      border-left-color: var(--yellow);
+      background: #fff8e3;
+    }
+
+    .profile.orange .one-liner {
+      border-left-color: var(--yellow);
+      background: #fff8e3;
+    }
+
+    .message-map {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .talk-track {
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--yellow);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .profile.teal .talk-track {
+      border-left-color: var(--yellow);
+    }
+
+    .profile.blue .talk-track {
+      border-left-color: var(--yellow);
+    }
+
+    .profile.orange .talk-track {
+      border-left-color: var(--yellow);
+    }
+
+    .talk-row {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      min-height: 70px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .talk-row:last-child {
+      border-bottom: 0;
+    }
+
+    .talk-label {
+      padding: 16px;
+      background: #fff;
+      font-weight: 850;
+    }
+
+    .talk-value {
+      padding: 16px;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 19px;
+      color: var(--muted);
+    }
+
+    .card > .list {
+      margin-top: 14px;
+    }
+
+    .list li + li {
+      margin-top: 7px;
+    }
+
+    .balanced-list-card,
+    .pain-points-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .balanced-list-card .list,
+    .pain-points-card .list {
+      flex: 1;
+      display: grid;
+      align-content: space-between;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .balanced-list-card .list li + li,
+    .pain-points-card .list li + li {
+      margin-top: 0;
+    }
+
+    .pain-points-card .list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .pain-points-card .list li {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .pain-points-card .list li::before {
+      content: "";
+      position: absolute;
+      top: 0.75em;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .section-dark .list {
+      color: #dce3ea;
+    }
+
+    .flow {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: var(--charcoal);
+      font-weight: 900;
+    }
+
+    .flow-copy {
+      min-height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 15px;
+      background: #fff;
+    }
+
+    .flow-copy strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .flow-copy span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .case-card {
+      display: block;
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .case-card:hover {
+      border-color: #b9c4cf;
+      box-shadow: 0 14px 34px rgba(23, 32, 42, 0.10);
+      transform: translateY(-2px);
+    }
+
+    .case-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--soft);
+    }
+
+    .case-body {
+      padding: 16px;
+    }
+
+    .case-body h4 {
+      font-size: 17px;
+    }
+
+    .case-body p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .fit-table {
+      width: 100%;
+      margin-top: 22px;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    .fit-table th,
+    .fit-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .fit-table th {
+      background: var(--charcoal);
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .fit-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .cta-band {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 18px;
+      align-items: center;
+      padding: 22px;
+      border-radius: 8px;
+      background: var(--charcoal);
+      color: #fff;
+    }
+
+    .cta-band strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .cta-band span {
+      display: block;
+      margin-top: 6px;
+      color: #dce3ea;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      background: var(--charcoal);
+      color: #fff;
+    }
+
+    .contact .section-title {
+      color: #fff;
+    }
+
+    .contact-line {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-line a,
+    .contact-line span {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .map-card {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      min-height: auto;
+      margin-top: 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-left: 5px solid var(--yellow);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      padding: 24px;
+      text-decoration: none;
+    }
+
+    .contact-line a.map-card {
+      display: grid;
+      color: #fff;
+    }
+
+    .map-card .map-copy {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .map-card strong {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .map-card span {
+      color: #dce3ea;
+      font-size: 14px;
+    }
+
+    .map-card .map-address {
+      max-width: 520px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .map-card .map-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 40px;
+      margin-top: 4px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: var(--yellow);
+      color: var(--charcoal);
+      font-weight: 850;
+    }
+
+    .source-note {
+      padding: 18px clamp(22px, 5vw, 66px);
+      color: #69737f;
+      background: #f8fafc;
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero:before {
+        background: linear-gradient(180deg, rgba(47, 55, 62, 0.96), rgba(47, 55, 62, 0.82));
+      }
+
+      .hero-bg {
+        object-position: center;
+      }
+
+      .hero-meta,
+      .hero-actions,
+      .profile-table-grid,
+      .grid-3,
+      .case-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .profile-header,
+      .grid-2,
+      .message-map,
+      .contact,
+      .estimate-cta,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .hero-content {
+        padding: 32px 20px;
+        min-height: 620px;
+      }
+
+      .hero-meta,
+      .hero-actions,
+      .profile-table-grid,
+      .grid-3,
+      .case-grid,
+      .nav {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        position: static;
+      }
+
+      .nav a {
+        justify-content: flex-start;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .talk-row {
+        grid-template-columns: 1fr;
+      }
+
+      .estimate-cta .btn {
+        width: 100%;
+      }
+
+      .map-card {
+        padding: 20px;
+      }
+
+      .profile-table th,
+      .profile-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .profile-table th {
+        padding-bottom: 5px;
+        border-bottom: 0;
+      }
+
+      .profile-table td {
+        padding-top: 0;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        min-height: auto;
+      }
+    }
+
+
+    .single-profile .profile {
+      scroll-margin-top: 72px;
+    }
+
+    .single-profile .hero-actions .btn strong {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+    }
+
+    .single-profile .source-note a {
+      color: inherit;
+    }
+
+  </style>
+</head>
+
+<body>
+  <article class="page single-profile">
+    <header class="hero">
+      <img class="hero-bg" src="assets/hero-company-working-desk-clean.jpg" alt="">
+      <div class="hero-content">
+        <div>
+          <img class="brand-logo" src="assets/designveloper-logo-light.png" alt="Designveloper - Realizing Ideas">
+        </div>
+
+        <div>
+          <div class="eyebrow">Outsourcing Profile 02</div>
+          <h1>Existing Product</h1>
+          <p class="hero-lead">
+            For clients that already have a product, codebase, backlog, or vendor and need a reliable team to audit, take over, and continue delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://meetings-na2.hubspot.com/khuyenltp" target="_blank" rel="noopener">
+              <strong>Start audit</strong>
+              <span>Begin with technical review and transition scoping.</span>
+            </a>
+            <a class="btn" href="https://www.designveloper.com/estimation/" target="_blank" rel="noopener">
+              <strong>Share product context</strong>
+              <span>Send goals, roadmap, backlog, and constraints.</span>
+            </a>
+            <a class="btn" href="company-profile-outsourcing-3-icp.html">
+              <strong>View all profiles</strong>
+              <span>Compare all outsourcing options.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <div class="metric"><strong>2013</strong><span>Founded in Ho Chi Minh City</span></div>
+          <div class="metric"><strong>100+</strong><span>Projects delivered</span></div>
+          <div class="metric"><strong>200k+</strong><span>Hours of work</span></div>
+          <div class="metric"><strong>100+</strong><span>Engineers</span></div>
+          <div class="metric"><strong>20+</strong><span>Technologies applied</span></div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Profile navigation">
+      <a href="#company">Company snapshot</a>
+      <a href="#profile">Profile details</a>
+      <a href="#contact">Next step</a>
+    </nav>
+
+    <section id="company" class="section-soft">
+      <div class="section-kicker">Company snapshot</div>
+      <h2 class="section-title">Who is Designveloper?</h2>
+      <p class="section-lead">
+        Designveloper (DSV) is a Vietnam-based software development partner founded in 2013.
+        We build and scale web, mobile, custom software, AI-powered business tools, UI/UX,
+        VOIP, and security solutions. For outsourcing clients, we go beyond coding:
+        we clarify business goals, define scope, estimate effort, build MVPs, deliver the product,
+        and support it after launch.
+      </p>
+
+      <div class="estimate-cta">
+        <div>
+          <strong>Have a project brief ready?</strong>
+          <span>Share your project goals, scope, timeline, and budget range so DSV can prepare a more useful first estimate.</span>
+        </div>
+        <a class="btn primary" href="https://www.designveloper.com/estimation/" target="_blank" rel="noopener">Submit project details</a>
+      </div>
+
+      <div class="grid-3">
+        <div class="card snapshot-card">
+          <div class="accent-line"></div>
+          <h3>Delivery capability</h3>
+          <p>Agile/Scrum delivery with daily syncs, milestone reviews, regular demos, progress reports, and quick prototype or MVP validation before full build.</p>
+          <div class="tag-list">
+            <span class="tag">Daily Sync</span>
+            <span class="tag">Milestones</span>
+            <span class="tag">Demos</span>
+            <span class="tag">Prototype</span>
+            <span class="tag">MVP</span>
+          </div>
+        </div>
+
+        <div class="card snapshot-card">
+          <div class="accent-line accent-teal"></div>
+          <h3>Common tech stack</h3>
+          <p>Experienced across modern web and mobile stacks, from frontend and backend development to databases, cloud infrastructure, and DevOps.</p>
+          <div class="tag-list">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">React Native</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="card snapshot-card">
+          <div class="accent-line accent-blue"></div>
+          <h3>Transparent process</h3>
+          <p>Clear communication through the client's tools, with visible task status, source code, time tracking, documentation, and delivery updates.</p>
+          <div class="tag-list">
+            <span class="tag">Slack</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Confluence</span>
+            <span class="tag">Reports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="profile blue section-soft">
+      <div class="profile-header">
+        <div>
+          <div class="section-kicker">Profile version 02</div>
+          <h2 class="section-title">I already have a product and need a new team/vendor</h2>
+          <p class="section-lead">
+            For clients with an existing production/staging product, repository, backlog, or product in progress
+            that is delayed, hard to maintain, buggy, undocumented, or ready for a new team to take over.
+          </p>
+        </div>
+        <div class="one-liner">
+          DSV helps audit the current product, plan a controlled transition, and continue development while reducing business disruption.
+        </div>
+      </div>
+
+      <div class="message-map">
+        <div class="card pain-points-card">
+          <h3>Typical pain points</h3>
+          <ul class="list">
+            <li>The previous vendor is slow, release quality is unstable, or support is no longer reliable.</li>
+            <li>The codebase is hard to maintain, buggy, or missing documentation.</li>
+            <li>You do not fully understand the current technical state and worry about switching teams.</li>
+            <li>The backlog keeps growing while the business still needs a clear product roadmap.</li>
+          </ul>
+        </div>
+
+        <div class="talk-track">
+          <div class="talk-row">
+            <div class="talk-label">Recommended message</div>
+            <div class="talk-value">For an existing product, DSV should not quote immediately. The right first step is audit and technical scoping to understand the code, infrastructure, backlog, and takeover risks.</div>
+          </div>
+          <div class="talk-row">
+            <div class="talk-label">What to emphasize</div>
+            <div class="talk-value">Controlled transition, code review, roadmap takeover, pilot sprint, delivery continuity.</div>
+          </div>
+          <div class="talk-row">
+            <div class="talk-label">Best next step</div>
+            <div class="talk-value">Start with technical audit or transition scoping before preparing a detailed quotation.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card balanced-list-card">
+          <h3>What DSV can offer</h3>
+          <ul class="list">
+            <li>Review source code, architecture, infrastructure, deployment, and third-party integrations.</li>
+            <li>Create a gap list: bugs, technical debt, security risks, and missing documentation.</li>
+            <li>Propose a 2-4 week transition plan to reduce takeover risk.</li>
+            <li>Run a pilot sprint or small module before taking on a larger roadmap.</li>
+            <li>Continue feature development, performance improvement, refactoring, or maintenance.</li>
+          </ul>
+        </div>
+
+        <div class="card balanced-list-card">
+          <h3>What the client should prepare</h3>
+          <ul class="list">
+            <li>Limited repository access or a code package.</li>
+            <li>Staging/production access if product behavior needs to be reviewed.</li>
+            <li>Backlog, bug list, current roadmap, and business priorities.</li>
+            <li>Architecture notes, API docs, and deployment docs if available.</li>
+            <li>Technical owner or product owner joining the technical alignment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="fit-table" aria-label="Takeover engagement">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Goal</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Technical Audit</td>
+            <td>Understand the current product state before committing.</td>
+            <td>Risk list, code/infra observation, missing information.</td>
+          </tr>
+          <tr>
+            <td>Transition Scoping</td>
+            <td>Choose a small, controlled takeover scope.</td>
+            <td>2-4 week roadmap, team proposal, estimation range.</td>
+          </tr>
+          <tr>
+            <td>Pilot Sprint</td>
+            <td>Prove that the team can understand the code and deliver.</td>
+            <td>Bug fix or small module, demo, report, full proposal.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:32px;">Relevant case studies</h3>
+      <div class="case-grid">
+        <a class="case-card" href="https://www.designveloper.com/blog/project/song-nhi/" target="_blank" rel="noopener">
+          <img src="https://www.designveloper.com/wp-content/uploads/2018/10/Thumbnail-banner-song-nhi-project-detail.png" alt="Song Nhi project">
+          <div class="case-body">
+            <h4>Song Nhi</h4>
+            <p>A virtual financial assistant that helps users manage personal finance. Relevant for AI, chatbot, mobile app, and consumer-facing products.</p>
+          </div>
+        </a>
+        <a class="case-card" href="https://www.designveloper.com/blog/project/chloe-ting/" target="_blank" rel="noopener">
+          <img src="https://www.designveloper.com/wp-content/uploads/2024/07/feature-image-chloe-ting.png" alt="Chloe Ting project">
+          <div class="case-body">
+            <h4>Chloe Ting</h4>
+            <p>A fitness digital ecosystem with website and mobile app experiences. Relevant for healthcare, fitness, content, and community platforms.</p>
+          </div>
+        </a>
+        <a class="case-card" href="https://www.designveloper.com/blog/project/odc/" target="_blank" rel="noopener">
+          <img src="https://www.designveloper.com/wp-content/uploads/2022/07/featured-image-odc-project-new.jpg" alt="ODC healthcare project">
+          <div class="case-body">
+            <h4>ODC Healthcare</h4>
+            <p>A healthcare platform for doctors and patients, including booking, prescriptions, and payments. Relevant for multi-role products with sensitive data.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="cta-band">
+        <div>
+          <strong>Recommended next step:</strong>
+          <span>Start with a technical audit so DSV can prepare a clear transition roadmap and detailed proposal.</span>
+        </div>
+        <a class="btn primary" href="https://meetings-na2.hubspot.com/khuyenltp" target="_blank" rel="noopener">Start audit</a>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="section-kicker">Start with clarity</div>
+      <h2 class="section-title">Choose the best next step for your project</h2>
+      <p class="section-lead">
+        Whether you are starting from an idea, taking over an existing product, or adding engineering capacity,
+        DSV can help clarify the scope, reduce delivery risk, and define the right engagement model.
+      </p>
+      <div class="grid-3">
+        <div class="card next-step-card">
+          <h3>Share project details</h3>
+          <p>Submit your project goals, expected timeline, budget range, and key requirements so DSV can prepare a useful first response.</p>
+          <div class="tag-list">
+            <a class="tag" href="https://www.designveloper.com/estimation/" target="_blank" rel="noopener">Submit brief</a>
+          </div>
+        </div>
+        <div class="card next-step-card">
+          <h3>Book discovery</h3>
+          <p>Schedule a 30-60' discussion to clarify the business goal, core users, scope, timeline, assumptions, and next step.</p>
+          <div class="tag-list">
+            <a class="tag" href="https://meetings-na2.hubspot.com/khuyenltp" target="_blank" rel="noopener">Book meeting</a>
+          </div>
+        </div>
+        <div class="card next-step-card">
+          <h3>Align with tech team</h3>
+          <p>For existing products or high-workload teams, start with a technical alignment to define handover, working model, and delivery cadence.</p>
+          <div class="tag-list">
+            <a class="tag" href="https://meetings-na2.hubspot.com/khuyenltp" target="_blank" rel="noopener">Align with tech team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <div class="section-kicker">Next step</div>
+        <h2 class="section-title">Got an idea? We can help you realize it.</h2>
+        <p class="section-lead">
+          The next step should be a discovery meeting or technical alignment so DSV can define the right scope,
+          assumptions, timeline range, and cost range.
+        </p>
+      </div>
+      <div class="contact-line">
+        <a href="https://www.designveloper.com/">www.designveloper.com</a>
+        <a href="mailto:sales@dgroup.co">sales@dgroup.co</a>
+        <a class="map-card" href="https://www.google.com/maps/search/?api=1&amp;query=Designveloper%2055%20Pho%20Duc%20Chinh%20Ho%20Chi%20Minh%20City%20Vietnam" target="_blank" rel="noopener" aria-label="Open Designveloper office on Google Maps">
+          <span class="map-copy">
+            <strong>Designveloper on Google Maps</strong>
+            <span class="map-address">6th Floor, 55 Pho Duc Chinh Street, Nguyen Thai Binh Ward, Ho Chi Minh City, Vietnam</span>
+            <span class="map-action">Open in Google Maps</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="source-note">
+      Content adapted from Designveloper's Company Profile PDF and the official website designveloper.com.
+    </footer>
+  </article>
+</body>
+</html>
